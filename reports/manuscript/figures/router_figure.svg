@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 1400 1280"
-   font-family="Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif"
-   fill="#1A202C"
+   viewBox="0 0 1241.0106 1247.2692"
+   font-family="Inter, system-ui, '-apple-system', Helvetica, Arial, sans-serif"
+   fill="#1a202c"
    version="1.1"
    id="svg118"
    sodipodi:docname="router_figure.svg"
    inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   width="1154.139"
+   height="1159.9592"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -21,28 +23,30 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.62857143"
-     inkscape:cx="140"
-     inkscape:cy="716.70455"
-     inkscape:window-width="2560"
-     inkscape:window-height="1440"
+     inkscape:zoom="0.55509033"
+     inkscape:cx="597.2001"
+     inkscape:cy="702.58836"
+     inkscape:window-width="1800"
+     inkscape:window-height="1039"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="39"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg118" />
+     inkscape:current-layer="g118"
+     showguides="true"
+     inkscape:clip-to-page="true" />
   <defs
      id="defs16">
     <rect
        x="-31.818182"
        y="1080.2273"
-       width="151.13636"
+       width="151.13635"
        height="41.363636"
        id="rect121" />
     <rect
        x="-35"
        y="1190"
        width="213.18182"
-       height="89.090909"
+       height="89.090912"
        id="rect120" />
     <marker
        id="arr"
@@ -54,8 +58,8 @@
        markerHeight="6"
        orient="auto">
       <path
-         d="M0,1 L9,5 L0,9 Z"
-         fill="#2D3748"
+         d="M 0,1 9,5 0,9 Z"
+         fill="#2d3748"
          id="path1" />
     </marker>
     <marker
@@ -68,8 +72,8 @@
        markerHeight="6"
        orient="auto">
       <path
-         d="M0,1 L9,5 L0,9 Z"
-         fill="#C53030"
+         d="M 0,1 9,5 0,9 Z"
+         fill="#c53030"
          id="path2" />
     </marker>
     <marker
@@ -82,8 +86,8 @@
        markerHeight="6"
        orient="auto">
       <path
-         d="M0,1 L9,5 L0,9 Z"
-         fill="#2F855A"
+         d="M 0,1 9,5 0,9 Z"
+         fill="#2f855a"
          id="path3" />
     </marker>
     <linearGradient
@@ -136,7 +140,7 @@
        viewBox="-10 -10 20 20"
        overflow="visible">
       <g
-         stroke="#4A5568"
+         stroke="#4a5568"
          stroke-width="1.6"
          stroke-linecap="round"
          fill="none"
@@ -166,16 +170,16 @@
            y2="-5"
            id="line11" />
         <path
-           d="M-7,0 L-5,-2 M-7,0 L-5,2"
+           d="m -7,0 2,-2 m -2,2 2,2"
            id="path11" />
         <path
-           d="M7,0 L5,-2 M7,0 L5,2"
+           d="M 7,0 5,-2 M 7,0 5,2"
            id="path12" />
         <path
-           d="M0,-7 L-2,-5 M0,-7 L2,-5"
+           d="m 0,-7 -2,2 m 2,-2 2,2"
            id="path13" />
         <path
-           d="M0,7 L-2,5 M0,7 L2,5"
+           d="M 0,7 -2,5 M 0,7 2,5"
            id="path14" />
       </g>
     </symbol>
@@ -184,9 +188,9 @@
        viewBox="-10 -12 20 24"
        overflow="visible">
       <path
-         d="M0,-10 C2,-6 5,-3 5,1 C5,5 2.5,8 0,8 C-2.5,8 -5,5 -5,1              C-5,-1 -3,-3 -2,-2 C-1,-4 -1,-7 0,-10 Z"
-         fill="#ED8936"
-         stroke="#C05621"
+         d="M 0,-10 C 2,-6 5,-3 5,1 5,5 2.5,8 0,8 -2.5,8 -5,5 -5,1 c 0,-2 2,-4 3,-3 1,-2 1,-5 2,-8 z"
+         fill="#ed8936"
+         stroke="#c05621"
          stroke-width="0.9"
          id="path15" />
     </symbol>
@@ -195,9 +199,9 @@
        viewBox="-8 -10 16 20"
        overflow="visible">
       <path
-         d="M-4,-2 L-4,-5 A4,4 0 0 1 4,-5 L4,-2"
+         d="m -4,-2 v -3 a 4,4 0 0 1 8,0 v 3"
          fill="none"
-         stroke="#22543D"
+         stroke="#22543d"
          stroke-width="1.6"
          id="path16" />
       <rect
@@ -206,15 +210,15 @@
          width="11"
          height="9"
          rx="1.5"
-         fill="#9AE6B4"
-         stroke="#22543D"
+         fill="#9ae6b4"
+         stroke="#22543d"
          stroke-width="1.4"
          id="rect16" />
       <circle
          cx="0"
          cy="2"
          r="1.2"
-         fill="#22543D"
+         fill="#22543d"
          id="circle16" />
     </symbol>
     <linearGradient
@@ -222,9 +226,9 @@
        xlink:href="#clsGrad"
        id="linearGradient119"
        x1="11.342269"
-       y1="80.34107"
+       y1="80.341072"
        x2="11.342269"
-       y2="94.623927"
+       y2="94.623924"
        gradientTransform="scale(1.1902381,0.84016805)"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
@@ -232,25 +236,173 @@
        xlink:href="#topGrad"
        id="linearGradient120"
        x1="11.342269"
-       y1="144.61393"
+       y1="144.61394"
        x2="11.342269"
-       y2="158.89678"
+       y2="158.89677"
        gradientTransform="scale(1.1902381,0.84016805)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#topGrad"
+       id="linearGradient1"
+       x1="29.854927"
+       y1="1203.0604"
+       x2="29.854927"
+       y2="1277.1215"
+       gradientTransform="scale(4.3058712,0.23224104)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#sideGrad"
+       id="linearGradient2"
+       x1="1220.2374"
+       y1="98.021912"
+       x2="1269.1151"
+       y2="98.021912"
+       gradientTransform="scale(0.35189873,2.8417266)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient3"
+       x1="247.23875"
+       y1="154.60667"
+       x2="247.23875"
+       y2="218.04041"
+       gradientTransform="scale(0.52338073,1.910655)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#topGrad"
+       id="linearGradient4"
+       x1="167.78215"
+       y1="1068.0892"
+       x2="167.78215"
+       y2="1129.4491"
+       gradientTransform="scale(3.5674323,0.28031366)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#sideGrad"
+       id="linearGradient5"
+       x1="1916.8654"
+       y1="124.50642"
+       x2="1958.1089"
+       y2="124.50642"
+       gradientTransform="scale(0.41703503,2.3978801)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient6"
+       x1="937.40161"
+       y1="201.67529"
+       x2="937.40161"
+       y2="253.59679"
+       gradientTransform="scale(0.63942708,1.5639)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#topGrad"
+       id="linearGradient7"
+       x1="224.93739"
+       y1="1203.0604"
+       x2="224.93739"
+       y2="1277.1215"
+       gradientTransform="scale(4.3058712,0.23224104)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#sideGrad"
+       id="linearGradient8"
+       x1="3607.2878"
+       y1="98.021912"
+       x2="3656.1655"
+       y2="98.021912"
+       gradientTransform="scale(0.35189873,2.8417266)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient9"
+       x1="1852.1888"
+       y1="154.60667"
+       x2="1852.1888"
+       y2="218.04041"
+       gradientTransform="scale(0.52338073,1.910655)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient10"
+       x1="-1.6871186"
+       y1="-1.3277074"
+       x2="-1.6871186"
+       y2="74.351616"
+       gradientTransform="scale(1.6596343,0.60254238)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient11"
+       x1="-1.6871186"
+       y1="-1.3277074"
+       x2="-1.6871186"
+       y2="74.351616"
+       gradientTransform="scale(1.6596343,0.60254238)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient12"
+       x1="-1.6871186"
+       y1="-1.3277074"
+       x2="-1.6871186"
+       y2="74.351616"
+       gradientTransform="scale(1.6596343,0.60254238)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient13"
+       x1="104.03197"
+       y1="-0.93730795"
+       x2="104.03197"
+       y2="59.853809"
+       gradientTransform="scale(1.3390114,0.74681963)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient14"
+       x1="186.18213"
+       y1="-0.93730795"
+       x2="186.18213"
+       y2="59.853809"
+       gradientTransform="scale(1.3390114,0.74681963)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#clsGrad"
+       id="linearGradient15"
+       x1="268.33228"
+       y1="-0.93730795"
+       x2="268.33228"
+       y2="59.853809"
+       gradientTransform="scale(1.3390114,0.74681963)"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <!-- TITLE -->
   <text
-     x="700"
-     y="34"
+     x="620.51025"
+     y="14.814453"
      text-anchor="middle"
-     font-size="20"
+     font-size="20px"
      font-weight="600"
-     id="text16">
-  Hierarchical Transformer Router for Adaptive ASR Model Selection
-</text>
+     id="text16">Hierarchical Transformer Router for Adaptive ASR Model Selection</text>
   <!-- AUDIO -->
   <g
-     transform="translate(610,68)"
+     transform="translate(530.51023,48.814453)"
      id="g17">
     <rect
        x="0"
@@ -258,21 +410,21 @@
        width="180"
        height="60"
        rx="6"
-       fill="#FFFFFF"
-       stroke="#1A202C"
+       fill="#ffffff"
+       stroke="#1a202c"
        stroke-width="1.6"
        id="rect17" />
     <text
        x="90"
        y="18"
        text-anchor="middle"
-       font-size="12"
+       font-size="12px"
        font-weight="600"
        id="text17">audio clip x</text>
     <path
-       d="M14,42 L24,42 L26,30 L30,52 L34,24 L38,50 L42,32 L46,46 L50,28            L54,48 L58,34 L62,44 L66,30 L70,50 L74,26 L78,52 L82,32            L86,46 L90,30 L94,48 L98,34 L102,44 L106,28 L110,50 L114,32            L118,46 L122,30 L126,48 L130,34 L134,44 L138,38 L142,42 L154,42 L166,42"
+       d="m 14,42 h 10 l 2,-12 4,22 4,-28 4,26 4,-18 4,14 4,-18 4,20 4,-14 4,10 4,-14 4,20 4,-24 4,26 4,-20 4,14 4,-16 4,18 4,-14 4,10 4,-16 4,22 4,-18 4,14 4,-16 4,18 4,-14 4,10 4,-6 4,4 h 12 12"
        fill="none"
-       stroke="#3182CE"
+       stroke="#3182ce"
        stroke-width="1.5"
        stroke-linejoin="round"
        id="path17" />
@@ -281,213 +433,192 @@
        y1="42"
        x2="166"
        y2="42"
-       stroke="#A0AEC0"
+       stroke="#a0aec0"
        stroke-width="0.5"
        id="line17" />
   </g>
   <line
-     x1="700"
-     y1="128"
-     x2="280"
-     y2="190"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="108.81445"
+     x2="200.51024"
+     y2="170.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line18" />
   <line
-     x1="700"
-     y1="128"
-     x2="700"
-     y2="190"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="108.81445"
+     x2="620.51025"
+     y2="170.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line19" />
   <line
-     x1="700"
-     y1="128"
-     x2="1120"
-     y2="190"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="108.81445"
+     x2="1040.5103"
+     y2="170.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line20" />
   <!-- FROZEN ENCODER PANEL -->
   <rect
-     x="80"
-     y="174"
+     x="0.51023471"
+     y="154.81445"
      width="1240"
      height="86"
      rx="8"
-     fill="#F7FAFC"
-     stroke="#A0AEC0"
+     fill="#f7fafc"
+     stroke="#a0aec0"
      stroke-width="1"
-     stroke-dasharray="4 3"
+     stroke-dasharray="4, 3"
      id="rect20" />
-  <use
-     href="#snowflake"
-     x="100"
-     y="188"
-     width="14"
-     height="14"
-     id="use20" />
   <text
-     x="120"
-     y="192"
-     font-size="11"
-     fill="#4A5568"
+     x="40.510235"
+     y="172.81445"
+     font-size="11px"
+     fill="#4a5568"
      font-style="italic"
-     id="text20">
-  pretrained / frozen ASR encoders
-</text>
+     id="text20">pretrained / frozen ASR encoders</text>
   <g
-     transform="translate(160,196)"
+     transform="translate(80.510235,176.81445)"
      id="g22">
     <rect
        width="240"
        height="56"
        rx="5"
-       fill="#E2E8F0"
-       stroke="#4A5568"
+       fill="#e2e8f0"
+       stroke="#4a5568"
        stroke-width="1.5"
-       id="rect21" />
-    <use
-       href="#snowflake"
-       x="22"
-       y="28"
-       width="12"
-       height="12"
-       id="use21" />
+       id="rect21"
+       x="0"
+       y="0" />
     <text
        x="125"
        y="22"
        text-anchor="middle"
-       font-size="13"
+       font-size="13px"
        font-weight="600"
        id="text21">HuBERT-Large</text>
     <text
        x="125"
        y="40"
        text-anchor="middle"
-       font-size="11"
-       fill="#4A5568"
+       font-size="11px"
+       fill="#4a5568"
        id="text22">encoder · D₁ = 1024</text>
   </g>
   <g
-     transform="translate(580,196)"
+     transform="translate(500.51023,176.81445)"
      id="g24">
     <rect
        width="240"
        height="56"
        rx="5"
-       fill="#E2E8F0"
-       stroke="#4A5568"
+       fill="#e2e8f0"
+       stroke="#4a5568"
        stroke-width="1.5"
-       id="rect22" />
-    <use
-       href="#snowflake"
-       x="22"
-       y="28"
-       width="12"
-       height="12"
-       id="use22" />
+       id="rect22"
+       x="0"
+       y="0" />
     <text
        x="125"
        y="22"
        text-anchor="middle"
-       font-size="13"
+       font-size="13px"
        font-weight="600"
        id="text23">Whisper-base</text>
     <text
        x="125"
        y="40"
        text-anchor="middle"
-       font-size="11"
-       fill="#4A5568"
+       font-size="11px"
+       fill="#4a5568"
        id="text24">encoder · D₂ = 512</text>
   </g>
   <g
-     transform="translate(1000,196)"
+     transform="translate(920.51023,176.81445)"
      id="g26">
     <rect
        width="240"
        height="56"
        rx="5"
-       fill="#E2E8F0"
-       stroke="#4A5568"
+       fill="#e2e8f0"
+       stroke="#4a5568"
        stroke-width="1.5"
-       id="rect24" />
-    <use
-       href="#snowflake"
-       x="22"
-       y="28"
-       width="12"
-       height="12"
-       id="use24" />
+       id="rect24"
+       x="0"
+       y="0" />
     <text
        x="125"
        y="22"
        text-anchor="middle"
-       font-size="13"
+       font-size="13px"
        font-weight="600"
        id="text25">W2V2-Large-Robust</text>
     <text
        x="125"
        y="40"
        text-anchor="middle"
-       font-size="11"
-       fill="#4A5568"
+       font-size="11px"
+       fill="#4a5568"
        id="text26">encoder · D₃ = 1024</text>
   </g>
   <line
-     x1="280"
-     y1="252"
-     x2="280"
-     y2="284"
-     stroke="#2D3748"
+     x1="200.51024"
+     y1="232.81445"
+     x2="200.51024"
+     y2="264.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line26" />
   <line
-     x1="700"
-     y1="252"
-     x2="700"
-     y2="304"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="232.81445"
+     x2="620.51025"
+     y2="284.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line27" />
   <line
-     x1="1120"
-     y1="252"
-     x2="1120"
-     y2="284"
-     stroke="#2D3748"
+     x1="1040.5103"
+     y1="232.81445"
+     x2="1040.5103"
+     y2="264.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line28" />
   <!-- TENSOR 1 -->
   <g
-     id="g40">
+     id="g40"
+     transform="translate(-79.489765,-19.185547)">
     <polygon
-       points="130,296 430,296 446,280 146,280"
+       points="430,296 446,280 146,280 130,296 "
        fill="url(#topGrad)"
-       stroke="#2B6CB0"
+       stroke="#2b6cb0"
        stroke-width="1.2"
-       id="polygon28" />
+       id="polygon28"
+       style="fill:url(#linearGradient1)" />
     <polygon
-       points="430,296 446,280 446,400 430,416"
+       points="446,280 446,400 430,416 430,296 "
        fill="url(#sideGrad)"
-       stroke="#2B6CB0"
+       stroke="#2b6cb0"
        stroke-width="1.2"
-       id="polygon29" />
+       id="polygon29"
+       style="fill:url(#linearGradient2)" />
     <rect
        x="130"
        y="296"
        width="300"
        height="120"
-       fill="#FFFFFF"
-       stroke="#2B6CB0"
+       fill="#ffffff"
+       stroke="#2b6cb0"
        stroke-width="1.4"
        id="rect29" />
     <rect
@@ -496,14 +627,15 @@
        width="32"
        height="120"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.2"
-       id="rect30" />
+       id="rect30"
+       style="fill:url(#linearGradient3)" />
     <text
        x="146"
        y="350"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-weight="700"
        fill="#744210"
        id="text30">CLS</text>
@@ -511,12 +643,12 @@
        x="146"
        y="364"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-style="italic"
        fill="#744210"
        id="text31">c₁</text>
     <g
-       stroke="#BEE3F8"
+       stroke="#bee3f8"
        stroke-width="0.8"
        id="g38">
       <line
@@ -572,48 +704,51 @@
        x="280"
        y="272"
        text-anchor="middle"
-       font-size="10"
-       fill="#4A5568"
+       font-size="10px"
+       fill="#4a5568"
        font-style="italic"
        id="text38">T₁ frames →</text>
     <text
        x="460"
        y="360"
-       font-size="10"
-       fill="#4A5568"
+       font-size="10px"
+       fill="#4a5568"
        font-style="italic"
-       transform="rotate(-90 460 360)"
+       transform="rotate(-90,460,360)"
        id="text39">↑ 1024</text>
     <text
        x="280"
        y="436"
        text-anchor="middle"
-       font-size="12"
+       font-size="12px"
        font-weight="700"
-       id="text40">Hₙ⁽¹⁾  shape: (T₁, 1024)</text>
+       id="text40">Hₙ⁽¹⁾ shape: (T₁, 1024)</text>
   </g>
   <!-- TENSOR 2 -->
   <g
-     id="g49">
+     id="g49"
+     transform="translate(-79.489765,-19.185547)">
     <polygon
-       points="600,316 800,316 816,300 616,300"
+       points="800,316 816,300 616,300 600,316 "
        fill="url(#topGrad)"
-       stroke="#2B6CB0"
+       stroke="#2b6cb0"
        stroke-width="1.2"
-       id="polygon40" />
+       id="polygon40"
+       style="fill:url(#linearGradient4)" />
     <polygon
-       points="800,316 816,300 816,380 800,396"
+       points="816,300 816,380 800,396 800,316 "
        fill="url(#sideGrad)"
-       stroke="#2B6CB0"
+       stroke="#2b6cb0"
        stroke-width="1.2"
-       id="polygon41" />
+       id="polygon41"
+       style="fill:url(#linearGradient5)" />
     <rect
        x="600"
        y="316"
        width="200"
        height="80"
-       fill="#FFFFFF"
-       stroke="#2B6CB0"
+       fill="#ffffff"
+       stroke="#2b6cb0"
        stroke-width="1.4"
        id="rect41" />
     <rect
@@ -622,14 +757,15 @@
        width="32"
        height="80"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.2"
-       id="rect42" />
+       id="rect42"
+       style="fill:url(#linearGradient6)" />
     <text
        x="616"
        y="350"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-weight="700"
        fill="#744210"
        id="text42">CLS</text>
@@ -637,12 +773,12 @@
        x="616"
        y="364"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-style="italic"
        fill="#744210"
        id="text43">c₂</text>
     <g
-       stroke="#BEE3F8"
+       stroke="#bee3f8"
        stroke-width="0.8"
        id="g47">
       <line
@@ -680,48 +816,51 @@
        x="700"
        y="292"
        text-anchor="middle"
-       font-size="10"
-       fill="#4A5568"
+       font-size="10px"
+       fill="#4a5568"
        font-style="italic"
        id="text47">T₂ frames →</text>
     <text
        x="830"
        y="360"
-       font-size="10"
-       fill="#4A5568"
+       font-size="10px"
+       fill="#4a5568"
        font-style="italic"
-       transform="rotate(-90 830 360)"
+       transform="rotate(-90,830,360)"
        id="text48">↑ 512</text>
     <text
        x="700"
        y="416"
        text-anchor="middle"
-       font-size="12"
+       font-size="12px"
        font-weight="700"
-       id="text49">Hₙ⁽²⁾  shape: (T₂, 512)</text>
+       id="text49">Hₙ⁽²⁾ shape: (T₂, 512)</text>
   </g>
   <!-- TENSOR 3 -->
   <g
-     id="g61">
+     id="g61"
+     transform="translate(-79.489765,-19.185547)">
     <polygon
-       points="970,296 1270,296 1286,280 986,280"
+       points="1270,296 1286,280 986,280 970,296 "
        fill="url(#topGrad)"
-       stroke="#2B6CB0"
+       stroke="#2b6cb0"
        stroke-width="1.2"
-       id="polygon49" />
+       id="polygon49"
+       style="fill:url(#linearGradient7)" />
     <polygon
-       points="1270,296 1286,280 1286,400 1270,416"
+       points="1286,280 1286,400 1270,416 1270,296 "
        fill="url(#sideGrad)"
-       stroke="#2B6CB0"
+       stroke="#2b6cb0"
        stroke-width="1.2"
-       id="polygon50" />
+       id="polygon50"
+       style="fill:url(#linearGradient8)" />
     <rect
        x="970"
        y="296"
        width="300"
        height="120"
-       fill="#FFFFFF"
-       stroke="#2B6CB0"
+       fill="#ffffff"
+       stroke="#2b6cb0"
        stroke-width="1.4"
        id="rect50" />
     <rect
@@ -730,14 +869,15 @@
        width="32"
        height="120"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.2"
-       id="rect51" />
+       id="rect51"
+       style="fill:url(#linearGradient9)" />
     <text
        x="986"
        y="350"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-weight="700"
        fill="#744210"
        id="text51">CLS</text>
@@ -745,12 +885,12 @@
        x="986"
        y="364"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-style="italic"
        fill="#744210"
        id="text52">c₃</text>
     <g
-       stroke="#BEE3F8"
+       stroke="#bee3f8"
        stroke-width="0.8"
        id="g59">
       <line
@@ -806,156 +946,161 @@
        x="1120"
        y="272"
        text-anchor="middle"
-       font-size="10"
-       fill="#4A5568"
+       font-size="10px"
+       fill="#4a5568"
        font-style="italic"
        id="text59">T₃ frames →</text>
     <text
        x="1300"
        y="360"
-       font-size="10"
-       fill="#4A5568"
+       font-size="10px"
+       fill="#4a5568"
        font-style="italic"
-       transform="rotate(-90 1300 360)"
+       transform="rotate(-90,1300,360)"
        id="text60">↑ 1024</text>
     <text
        x="1120"
        y="436"
        text-anchor="middle"
-       font-size="12"
+       font-size="12px"
        font-weight="700"
-       id="text61">Hₙ⁽³⁾  shape: (T₃, 1024)</text>
+       id="text61">Hₙ⁽³⁾ shape: (T₃, 1024)</text>
   </g>
   <text
-     x="700"
-     y="458"
+     x="620.51025"
+     y="438.81445"
      text-anchor="middle"
-     font-size="11"
+     font-size="11px"
      font-style="italic"
-     fill="#4A5568"
-     id="text62">
-  frame-level tensors preserved (no temporal pooling); each expert has its own (Tₖ, Dₖ)
-</text>
+     fill="#4a5568"
+     id="text62">frame-level tensors preserved (no temporal pooling); each expert has its own (Tₖ, Dₖ)</text>
   <line
-     x1="280"
-     y1="468"
-     x2="280"
-     y2="490"
-     stroke="#2D3748"
+     x1="200.51024"
+     y1="448.81445"
+     x2="200.51024"
+     y2="470.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line62" />
   <line
-     x1="700"
-     y1="468"
-     x2="700"
-     y2="490"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="448.81445"
+     x2="620.51025"
+     y2="470.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line63" />
   <line
-     x1="1120"
-     y1="468"
-     x2="1120"
-     y2="490"
-     stroke="#2D3748"
+     x1="1040.5103"
+     y1="448.81445"
+     x2="1040.5103"
+     y2="470.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line64" />
   <!-- PROJECTIONS -->
   <g
-     transform="translate(180,490)"
+     transform="translate(100.51023,470.81445)"
      id="g64">
     <rect
        width="200"
        height="28"
        rx="4"
-       fill="#FEFCBF"
-       stroke="#B7791F"
+       fill="#fefcbf"
+       stroke="#b7791f"
        stroke-width="1.2"
-       id="rect64" />
+       id="rect64"
+       x="0"
+       y="0" />
     <text
        x="100"
        y="18"
        text-anchor="middle"
-       font-size="11"
+       font-size="11px"
        id="text64">Wₚ⁽¹⁾ + e₁ + PE</text>
   </g>
   <g
-     transform="translate(600,490)"
+     transform="translate(520.51023,470.81445)"
      id="g65">
     <rect
        width="200"
        height="28"
        rx="4"
-       fill="#FEFCBF"
-       stroke="#B7791F"
+       fill="#fefcbf"
+       stroke="#b7791f"
        stroke-width="1.2"
-       id="rect65" />
+       id="rect65"
+       x="0"
+       y="0" />
     <text
        x="100"
        y="18"
        text-anchor="middle"
-       font-size="11"
+       font-size="11px"
        id="text65">Wₚ⁽²⁾ + e₂ + PE</text>
   </g>
   <g
-     transform="translate(1020,490)"
+     transform="translate(940.51023,470.81445)"
      id="g66">
     <rect
        width="200"
        height="28"
        rx="4"
-       fill="#FEFCBF"
-       stroke="#B7791F"
+       fill="#fefcbf"
+       stroke="#b7791f"
        stroke-width="1.2"
-       id="rect66" />
+       id="rect66"
+       x="0"
+       y="0" />
     <text
        x="100"
        y="18"
        text-anchor="middle"
-       font-size="11"
+       font-size="11px"
        id="text66">Wₚ⁽³⁾ + e₃ + PE</text>
   </g>
   <line
-     x1="280"
-     y1="518"
-     x2="280"
-     y2="556"
-     stroke="#2D3748"
+     x1="200.51024"
+     y1="498.81445"
+     x2="200.51024"
+     y2="536.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line66" />
   <line
-     x1="700"
-     y1="518"
-     x2="700"
-     y2="556"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="498.81445"
+     x2="620.51025"
+     y2="536.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line67" />
   <line
-     x1="1120"
-     y1="518"
-     x2="1120"
-     y2="556"
-     stroke="#2D3748"
+     x1="1040.5103"
+     y1="498.81445"
+     x2="1040.5103"
+     y2="536.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line68" />
   <!-- STAGE 1 STACK -->
   <g
-     id="g77">
+     id="g77"
+     transform="translate(-79.489765,-19.185547)">
     <rect
        x="220"
        y="572"
        width="960"
        height="142"
        rx="8"
-       fill="#DBEAFE"
-       stroke="#2C5282"
+       fill="#dbeafe"
+       stroke="#2c5282"
        stroke-width="1.2"
        opacity="0.55"
        id="rect68" />
@@ -965,8 +1110,8 @@
        width="960"
        height="142"
        rx="8"
-       fill="#DBEAFE"
-       stroke="#2C5282"
+       fill="#dbeafe"
+       stroke="#2c5282"
        stroke-width="1.2"
        opacity="0.75"
        id="rect69" />
@@ -976,8 +1121,8 @@
        width="960"
        height="142"
        rx="8"
-       fill="#DBEAFE"
-       stroke="#2C5282"
+       fill="#dbeafe"
+       stroke="#2c5282"
        stroke-width="1.6"
        id="rect70" />
     <use
@@ -990,19 +1135,17 @@
     <text
        x="240"
        y="576"
-       font-size="13"
+       font-size="13px"
        font-weight="700"
-       fill="#2C5282"
+       fill="#2c5282"
        id="text70">Stage 1 — Per-Expert Temporal Encoder</text>
     <text
        x="540"
        y="576"
-       font-size="11"
+       font-size="11px"
        font-style="italic"
-       fill="#4A5568"
-       id="text71">
-    weights θ shared across experts; identity embedding eₖ distinguishes streams
-  </text>
+       fill="#4a5568"
+       id="text71">weights θ shared across experts; identity embedding eₖ distinguishes streams</text>
     <g
        transform="translate(220,592)"
        id="g72">
@@ -1010,15 +1153,17 @@
          width="920"
          height="22"
          rx="3"
-         fill="#FFFFFF"
-         stroke="#2C5282"
+         fill="#ffffff"
+         stroke="#2c5282"
          stroke-width="1"
-         id="rect71" />
+         id="rect71"
+         x="0"
+         y="0" />
       <text
          x="460"
          y="16"
          text-anchor="middle"
-         font-size="11"
+         font-size="11px"
          id="text72">Multi-Head Self-Attention</text>
     </g>
     <g
@@ -1028,16 +1173,18 @@
          width="920"
          height="16"
          rx="3"
-         fill="#FFFFFF"
-         stroke="#2C5282"
+         fill="#ffffff"
+         stroke="#2c5282"
          stroke-width="1"
-         id="rect72" />
+         id="rect72"
+         x="0"
+         y="0" />
       <text
          x="460"
          y="12"
          text-anchor="middle"
-         font-size="10"
-         fill="#4A5568"
+         font-size="10px"
+         fill="#4a5568"
          id="text73">Add &amp; LayerNorm</text>
     </g>
     <g
@@ -1047,15 +1194,17 @@
          width="920"
          height="20"
          rx="3"
-         fill="#FFFFFF"
-         stroke="#2C5282"
+         fill="#ffffff"
+         stroke="#2c5282"
          stroke-width="1"
-         id="rect73" />
+         id="rect73"
+         x="0"
+         y="0" />
       <text
          x="460"
          y="14"
          text-anchor="middle"
-         font-size="11"
+         font-size="11px"
          id="text74">Feed-Forward (GELU)</text>
     </g>
     <g
@@ -1065,97 +1214,97 @@
          width="920"
          height="16"
          rx="3"
-         fill="#FFFFFF"
-         stroke="#2C5282"
+         fill="#ffffff"
+         stroke="#2c5282"
          stroke-width="1"
-         id="rect74" />
+         id="rect74"
+         x="0"
+         y="0" />
       <text
          x="460"
          y="12"
          text-anchor="middle"
-         font-size="10"
-         fill="#4A5568"
+         font-size="10px"
+         fill="#4a5568"
          id="text75">Add &amp; LayerNorm</text>
     </g>
     <g
        transform="translate(1106,632)"
        id="g76">
       <path
-         d="M0,-30 Q14,-15 14,0 Q14,15 0,30"
+         d="M 0,-30 Q 14,-15 14,0 14,15 0,30"
          fill="none"
-         stroke="#2C5282"
+         stroke="#2c5282"
          stroke-width="1.2"
          id="path75" />
       <text
          x="20"
          y="4"
-         font-size="11"
+         font-size="11px"
          font-style="italic"
-         fill="#2C5282"
+         fill="#2c5282"
          id="text76">× L₁</text>
     </g>
     <text
        x="680"
        y="687"
        text-anchor="middle"
-       font-size="10"
+       font-size="10px"
        font-style="italic"
-       fill="#2C5282"
-       id="text77">
-    same module applied to all three streams (parameter sharing)
-  </text>
+       fill="#2c5282"
+       id="text77">same module applied to all three streams (parameter sharing)</text>
   </g>
   <line
-     x1="280"
-     y1="704"
-     x2="280"
-     y2="740"
-     stroke="#2D3748"
+     x1="200.51024"
+     y1="684.81445"
+     x2="200.51024"
+     y2="720.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line77" />
   <line
-     x1="700"
-     y1="704"
-     x2="700"
-     y2="740"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="684.81445"
+     x2="620.51025"
+     y2="720.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line78" />
   <line
-     x1="1120"
-     y1="704"
-     x2="1120"
-     y2="740"
-     stroke="#2D3748"
+     x1="1040.5103"
+     y1="684.81445"
+     x2="1040.5103"
+     y2="720.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line79" />
   <text
-     x="296"
-     y="726"
-     font-size="9"
-     fill="#2C5282"
+     x="216.51024"
+     y="706.81445"
+     font-size="9px"
+     fill="#2c5282"
      font-style="italic"
      id="text79">CLS out</text>
   <text
-     x="716"
-     y="726"
-     font-size="9"
-     fill="#2C5282"
+     x="636.51025"
+     y="706.81445"
+     font-size="9px"
+     fill="#2c5282"
      font-style="italic"
      id="text80">CLS out</text>
   <text
-     x="1136"
-     y="726"
-     font-size="9"
-     fill="#2C5282"
+     x="1056.5103"
+     y="706.81445"
+     font-size="9px"
+     fill="#2c5282"
      font-style="italic"
      id="text81">CLS out</text>
   <!-- SUMMARIES -->
   <g
-     transform="translate(220,740)"
+     transform="translate(140.51023,720.81445)"
      id="g83">
     <ellipse
        cx="60"
@@ -1163,27 +1312,28 @@
        rx="62"
        ry="22"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.6"
-       id="ellipse81" />
+       id="ellipse81"
+       style="fill:url(#linearGradient10)" />
     <text
        x="60"
        y="20"
        text-anchor="middle"
-       font-size="14"
+       font-size="14px"
        font-weight="700"
        id="text82">c̃₁</text>
     <text
        x="60"
        y="32"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        fill="#744210"
        font-style="italic"
        id="text83">HuBERT summary</text>
   </g>
   <g
-     transform="translate(640,740)"
+     transform="translate(560.51023,720.81445)"
      id="g85">
     <ellipse
        cx="60"
@@ -1191,27 +1341,28 @@
        rx="62"
        ry="22"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.6"
-       id="ellipse83" />
+       id="ellipse83"
+       style="fill:url(#linearGradient11)" />
     <text
        x="60"
        y="20"
        text-anchor="middle"
-       font-size="14"
+       font-size="14px"
        font-weight="700"
        id="text84">c̃₂</text>
     <text
        x="60"
        y="32"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        fill="#744210"
        font-style="italic"
        id="text85">Whisper summary</text>
   </g>
   <g
-     transform="translate(1060,740)"
+     transform="translate(980.51023,720.81445)"
      id="g87">
     <ellipse
        cx="60"
@@ -1219,117 +1370,118 @@
        rx="62"
        ry="22"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.6"
-       id="ellipse85" />
+       id="ellipse85"
+       style="fill:url(#linearGradient12)" />
     <text
        x="60"
        y="20"
        text-anchor="middle"
-       font-size="14"
+       font-size="14px"
        font-weight="700"
        id="text86">c̃₃</text>
     <text
        x="60"
        y="32"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        fill="#744210"
        font-style="italic"
        id="text87">W2V2 summary</text>
   </g>
   <!-- BRIDGE -->
   <rect
-     x="200"
-     y="810"
+     x="120.51023"
+     y="790.81445"
      width="1000"
      height="42"
      rx="6"
-     fill="#FED7D7"
-     stroke="#C53030"
+     fill="#fed7d7"
+     stroke="#c53030"
      stroke-width="1.4"
-     stroke-dasharray="6 3"
+     stroke-dasharray="6, 3"
      id="rect87" />
   <text
-     x="220"
-     y="828"
-     font-size="12"
+     x="140.51024"
+     y="808.81445"
+     font-size="12px"
      font-weight="700"
-     fill="#9B2C2C"
+     fill="#9b2c2c"
      id="text88">Cross-Attention Bridge</text>
   <text
-     x="400"
-     y="828"
-     font-size="11"
+     x="320.51022"
+     y="808.81445"
+     font-size="11px"
      font-style="italic"
-     fill="#742A2A"
+     fill="#742a2a"
      id="text89">(optional)</text>
   <text
-     x="700"
-     y="844"
+     x="620.51025"
+     y="824.81445"
      text-anchor="middle"
-     font-size="11"
-     fill="#742A2A"
-     id="text90">
-  c̃ₖ ← LayerNorm( c̃ₖ + MHA( Q = c̃ₖ ,  K, V = Fₙ⁽¬ᵏ⁾ ) )
-</text>
+     font-size="11px"
+     fill="#742a2a"
+     id="text90">c̃ₖ ← LayerNorm( c̃ₖ + MHA( Q = c̃ₖ , K, V = Fₙ⁽¬ᵏ⁾ ) )</text>
   <line
-     x1="280"
-     y1="784"
-     x2="280"
-     y2="810"
-     stroke="#C53030"
+     x1="200.51024"
+     y1="764.81445"
+     x2="200.51024"
+     y2="790.81445"
+     stroke="#c53030"
      stroke-width="1.2"
-     stroke-dasharray="4 2"
+     stroke-dasharray="4, 2"
      marker-end="url(#arrRed)"
      id="line90" />
   <line
-     x1="700"
-     y1="784"
-     x2="700"
-     y2="810"
-     stroke="#C53030"
+     x1="620.51025"
+     y1="764.81445"
+     x2="620.51025"
+     y2="790.81445"
+     stroke="#c53030"
      stroke-width="1.2"
-     stroke-dasharray="4 2"
+     stroke-dasharray="4, 2"
      marker-end="url(#arrRed)"
      id="line91" />
   <line
-     x1="1120"
-     y1="784"
-     x2="1120"
-     y2="810"
-     stroke="#C53030"
+     x1="1040.5103"
+     y1="764.81445"
+     x2="1040.5103"
+     y2="790.81445"
+     stroke="#c53030"
      stroke-width="1.2"
-     stroke-dasharray="4 2"
+     stroke-dasharray="4, 2"
      marker-end="url(#arrRed)"
      id="line92" />
   <!-- SEQUENCE Z_n -->
   <g
-     transform="translate(450,888)"
+     transform="translate(370.51023,868.81445)"
      id="g97">
     <rect
        width="500"
        height="44"
        rx="4"
-       fill="#FFFFFF"
-       stroke="#2C5282"
+       fill="#ffffff"
+       stroke="#2c5282"
        stroke-width="1.4"
-       id="rect92" />
+       id="rect92"
+       x="0"
+       y="0" />
     <rect
        x="0"
        y="0"
        width="80"
        height="44"
        rx="4"
-       fill="#C6F6D5"
-       stroke="#2F855A"
+       fill="#c6f6d5"
+       stroke="#2f855a"
        stroke-width="1.6"
        id="rect93" />
     <text
        x="40"
        y="28"
        text-anchor="middle"
-       font-size="15"
+       font-size="15px"
        font-weight="700"
        id="text93">c*</text>
     <rect
@@ -1339,14 +1491,15 @@
        height="44"
        rx="4"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.4"
-       id="rect94" />
+       id="rect94"
+       style="fill:url(#linearGradient13)" />
     <text
        x="180"
        y="28"
        text-anchor="middle"
-       font-size="14"
+       font-size="14px"
        font-weight="700"
        id="text94">c̃₁</text>
     <rect
@@ -1356,14 +1509,15 @@
        height="44"
        rx="4"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.4"
-       id="rect95" />
+       id="rect95"
+       style="fill:url(#linearGradient14)" />
     <text
        x="290"
        y="28"
        text-anchor="middle"
-       font-size="14"
+       font-size="14px"
        font-weight="700"
        id="text95">c̃₂</text>
     <rect
@@ -1373,147 +1527,137 @@
        height="44"
        rx="4"
        fill="url(#clsGrad)"
-       stroke="#B7791F"
+       stroke="#b7791f"
        stroke-width="1.4"
-       id="rect96" />
+       id="rect96"
+       style="fill:url(#linearGradient15)" />
     <text
        x="400"
        y="28"
        text-anchor="middle"
-       font-size="14"
+       font-size="14px"
        font-weight="700"
        id="text96">c̃₃</text>
     <text
        x="250"
        y="60"
        text-anchor="middle"
-       font-size="10"
+       font-size="10px"
        font-style="italic"
-       fill="#4A5568"
-       id="text97">
-    Stage-2 input sequence Zₙ = ( c*,  c̃₁,  c̃₂,  c̃₃ )
-  </text>
+       fill="#4a5568"
+       id="text97">Stage-2 input sequence Zₙ = ( c*, c̃₁, c̃₂, c̃₃ )</text>
   </g>
   <path
-     d="M280,852 C280,872 460,876 590,888"
+     d="m 200.51023,832.81445 c 0,20 180,24 310,36"
      fill="none"
-     stroke="#2D3748"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="path97" />
   <path
-     d="M700,852 L700,888"
+     d="m 620.51023,832.81445 v 36"
      fill="none"
-     stroke="#2D3748"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="path98" />
   <path
-     d="M1120,852 C1120,872 920,876 810,888"
+     d="m 1040.5102,832.81445 c 0,20 -199.99997,24 -309.99997,36"
      fill="none"
-     stroke="#2D3748"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="path99" />
   <!-- STAGE 2 -->
   <g
-     transform="translate(380,968)"
+     transform="translate(300.51023,948.81445)"
      id="g100">
     <rect
        width="640"
        height="48"
        rx="8"
-       fill="#DBEAFE"
-       stroke="#2C5282"
+       fill="#dbeafe"
+       stroke="#2c5282"
        stroke-width="1.6"
-       id="rect99" />
-    <use
-       href="#flame"
-       x="22"
-       y="22"
-       width="14"
-       height="16"
-       id="use99" />
+       id="rect99"
+       x="0"
+       y="0" />
     <text
        x="320"
        y="22"
        text-anchor="middle"
-       font-size="13"
+       font-size="13px"
        font-weight="700"
-       fill="#2C5282"
-       id="text99">
-    Stage 2 — Cross-Expert Fusion Transformer
-  </text>
+       fill="#2c5282"
+       id="text99">Stage 2 — Cross-Expert Fusion Transformer</text>
     <text
        x="320"
        y="40"
        text-anchor="middle"
-       font-size="11"
-       fill="#4A5568"
+       font-size="11px"
+       fill="#4a5568"
        font-style="italic"
-       id="text100">
-    × L₂ layers · global token c* attends to all per-expert summaries
-  </text>
+       id="text100">× L₂ layers · global token c* attends to all per-expert summaries</text>
   </g>
   <line
-     x1="700"
-     y1="948"
-     x2="700"
-     y2="966"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="928.81445"
+     x2="620.51025"
+     y2="946.81445"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line100" />
   <line
-     x1="700"
-     y1="1016"
-     x2="700"
-     y2="1038"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="996.81445"
+     x2="620.51025"
+     y2="1018.8145"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line101" />
   <!-- c̃* -->
   <g
-     transform="translate(620,1040)"
+     transform="translate(540.51023,1020.8145)"
      id="g102">
     <ellipse
        cx="80"
        cy="20"
        rx="84"
        ry="22"
-       fill="#C6F6D5"
-       stroke="#2F855A"
+       fill="#c6f6d5"
+       stroke="#2f855a"
        stroke-width="2"
        id="ellipse101" />
     <text
        x="80"
        y="18"
        text-anchor="middle"
-       font-size="15"
+       font-size="15px"
        font-weight="700"
        id="text101">c̃*</text>
     <text
        x="80"
        y="32"
        text-anchor="middle"
-       font-size="9"
+       font-size="9px"
        font-style="italic"
-       fill="#22543D"
+       fill="#22543d"
        id="text102">global summary</text>
   </g>
   <line
-     x1="700"
-     y1="1082"
-     x2="700"
-     y2="1108"
-     stroke="#2D3748"
+     x1="620.51025"
+     y1="1062.8145"
+     x2="620.51025"
+     y2="1088.8145"
+     stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line102" />
   <!-- MLP + softmax -->
   <g
-     transform="translate(361.13636,1112.7727)"
+     transform="translate(281.64659,1093.5872)"
      id="g103">
     <rect
        width="240"
@@ -1533,17 +1677,17 @@
        id="text103">MLP · softmax</text>
   </g>
   <line
-     x1="613.86365"
-     y1="1129.1818"
-     x2="641.86365"
-     y2="1129.1818"
+     x1="534.3739"
+     y1="1109.9962"
+     x2="562.3739"
+     y2="1109.9962"
      stroke="#2d3748"
      stroke-width="1.4"
      marker-end="url(#arr)"
      id="line103" />
   <!-- routing distribution -->
   <g
-     transform="translate(653.04545,1115)"
+     transform="translate(573.55568,1095.8145)"
      id="g108">
     <rect
        width="220"
@@ -1611,15 +1755,15 @@
        id="text108">A₃</text>
   </g>
   <text
-     x="940"
-     y="1130"
-     font-size="11"
+     x="860.51025"
+     y="1110.8145"
+     font-size="11px"
      font-weight="700"
-     fill="#2F855A"
+     fill="#2f855a"
      id="text109">argmax → jₙ = 2</text>
   <!-- arrow from selected bar to decode -->
   <path
-     d="m 886.95096,1156.5832 q 58.00274,44.7077 -61.41469,56.4728"
+     d="m 807.46119,1137.3977 q 58.00274,44.7077 -61.41469,56.4728"
      fill="none"
      stroke="#2f855a"
      stroke-width="1.98341"
@@ -1628,7 +1772,7 @@
      id="path109" />
   <!-- DECODE -->
   <g
-     transform="translate(380,1215.4545)"
+     transform="translate(300.51023,1196.269)"
      id="g111">
     <rect
        width="640"
@@ -1640,13 +1784,6 @@
        id="rect109"
        x="0"
        y="0" />
-    <use
-       href="#lock"
-       x="32"
-       y="25"
-       width="14"
-       height="20"
-       id="use109" />
     <text
        x="320"
        y="22"
@@ -1665,11 +1802,11 @@
   </g>
   <!-- LEGEND (bottom-right corner) -->
   <g
-     transform="translate(1080.1,1086)"
+     transform="translate(1000.6102,1066.8145)"
      id="g118">
     <rect
-       width="280"
-       height="154"
+       width="199.73897"
+       height="146.13249"
        rx="6"
        fill="#fafafa"
        stroke="#a0aec0"
@@ -1706,23 +1843,17 @@
        stroke="#4a5568"
        stroke-width="1"
        id="rect113" />
-    <use
-       href="#snowflake"
-       x="60"
-       y="56"
-       width="9"
-       height="9"
-       id="use113" />
     <text
        x="74"
        y="60"
        font-size="10px"
        id="text114"
        style="white-space:pre;inline-size:149.263;display:inline"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       transform="translate(-36.527932,-0.8094973)"><tspan
          x="74"
          y="60"
-         id="tspan1">frozen pretrained encoder</tspan></text>
+         id="tspan2">frozen pretrained encoder</tspan></text>
     <rect
        x="14"
        y="68"
