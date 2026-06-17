@@ -15,8 +15,8 @@ Avoid &lt;24 GB VRAM pods. 48 GB (A40/L40) is unnecessary for this workload.
 ## One-time pod setup
 
 ```bash
-git clone https://github.com/huseyin-karaca/s2t-tr-dev.git
-cd s2t-tr-dev
+git clone https://github.com/samilnamli/transformer_experiments.git
+cd transformer_experiments
 git checkout runpod/voxpopuli-main-results
 
 # Copy the bundled parquet (24 GB) — choose one:
