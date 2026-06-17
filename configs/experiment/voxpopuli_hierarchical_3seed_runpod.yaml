@@ -1,0 +1,41 @@
+# HIT-ASR on VoxPopuli — 3 seeds (fast but reportable mean ± SEM).
+# Same batch as 1-seed smoke run that hit 23.03% test WER on seed 42.
+
+defaults:
+  - /trainer: default
+  - /data: voxpopuli
+  - _self_
+
+_target_: src.experiments.base.BaseExperiment
+parent_run_name: hierarchical_3seed
+seed: 42
+seeds: [42, 0, 1337]
+fixed_data_split: false
+
+float32_matmul_precision: medium
+
+trainer:
+  max_epochs: 50
+  precision: bf16-mixed
+
+data:
+  batch_size: 192
+  max_seq_len: 2000
+  eager_load: true
+  num_workers: 0
+
+stats:
+  metric: wer_mean
+  tests:
+    - _target_: src.stats.paired_t.NadeauBengioCorrectedTTest
+      alpha: 0.05
+
+child_runs:
+  - _target_: src.models.transformer.ASRModelSelectorLightning
+    name: hierarchical_transformer
+    primary_weight: 1.0
+    aux_ce_weight: 0.3
+    soft_ce_weight: 0.5
+    soft_ce_temperature: 1.5
+    class_balanced_loss: true
+    early_stopping_patience: 10

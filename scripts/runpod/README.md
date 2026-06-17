@@ -63,7 +63,16 @@ Results: `mlruns/` → `results/test_wer_comparison.json` on parent run.
 
 ```bash
 bash scripts/runpod/run_hierarchical_1seed.sh
-# or: uv run python run.py experiment=voxpopuli_hierarchical_1seed_runpod
 ```
 
-Uses `batch_size=192` (fits L40S). Override: `data.batch_size=128` if OOM. ~20–40 min for one seed.
+Uses `batch_size=192` (fits L40S). ~20–40 min for one seed.
+
+### HIT-ASR — 3 seeds (recommended compromise)
+
+```bash
+bash scripts/runpod/run_hierarchical_3seed.sh
+# or: uv run python run.py experiment=voxpopuli_hierarchical_3seed_runpod
+```
+
+Seeds `[42, 0, 1337]`, `batch_size=192`, paired stats enabled. ~1–2 h on L40S.
+Report `wer_mean ± wer_sem` from MLflow; note in paper that baselines used 16 seeds.
