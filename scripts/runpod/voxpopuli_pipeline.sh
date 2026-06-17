@@ -5,6 +5,9 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
 
+# Prefer torch's bundled CUDA/NCCL over conflicting PyPI nvidia-* packages.
+source "$ROOT/scripts/runpod/env_torch_cuda.sh"
+
 mkdir -p logs/runpod
 
 echo "=== [$(date -Is)] VoxPopuli RunPod pipeline ==="

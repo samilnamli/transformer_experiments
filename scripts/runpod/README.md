@@ -44,15 +44,12 @@ uv run python -c "import torch; print(torch.__version__, torch.cuda.is_available
 bash scripts/runpod/fix_cuda_torch.sh
 ```
 
-This removes the PyPI CUDA stack and installs a **self-contained `torch+cu124` wheel** (tries 2.6.0 → 2.5.1 → 2.4.1). That is enough for our experiments; transformers does not require torch 2.11 at runtime.
+This purges **all** `nvidia-*` / `cuda-toolkit` PyPI packages (they cause `undefined symbol: ncclCommWindowDeregister`), then installs a **self-contained `torch+cu124` wheel with `--no-deps`**.
 
-Re-run `fix_cuda_torch.sh` after any `uv sync`.
-
-If it still fails, check the driver and use the **PyTorch 2.2.0** RunPod template:
+If you see NCCL / import errors, nuke the venv and redo:
 
 ```bash
-nvidia-smi
-uv pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+rm -rf .venv && make create_environment && uv sync && bash scripts/runpod/fix_cuda_torch.sh
 ```
 
 ## Run everything in tmux (detach-safe)
