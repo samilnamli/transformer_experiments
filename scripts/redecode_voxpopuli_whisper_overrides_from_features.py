@@ -18,6 +18,7 @@ import numpy as np
 import pyarrow.parquet as pq
 import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor
+from transformers.modeling_outputs import BaseModelOutput
 
 from src.data.voxpopuli import resolve_voxpopuli_parquet
 
@@ -68,7 +69,7 @@ def main() -> None:
     whisper_transcription: List[str] = [""] * n_total
 
     processor = AutoProcessor.from_pretrained("openai/whisper-base")
-    model = AutoModelForSpeechSeq2Seq.from_pretrained("openai/whisper-base")
+    model = AutoModelForSpeechSeq2Seq.from_pretrained("openai/whisper-base", dtype=dtype)
     model.to(device)
     model.eval()
     forced = processor.get_decoder_prompt_ids(language="en", task="transcribe")
@@ -93,12 +94,13 @@ def main() -> None:
                 break
 
             gt = gts[row]
-            enc = _features_to_tensor(feats[row].as_py(), dtype=dtype).unsqueeze(0).to(device)
+            enc = _features_to_tensor(feats[row].as_py(), dtype=model.dtype).unsqueeze(0).to(device)
             T = enc.shape[1]
+            encoder_outputs = BaseModelOutput(last_hidden_state=enc)
 
             with torch.no_grad():
                 token_ids = model.generate(
-                    encoder_outputs=enc,
+                    encoder_outputs=encoder_outputs,
                     attention_mask=torch.ones((1, T), device=device, dtype=torch.long),
                     forced_decoder_ids=forced,
                     max_new_tokens=args.max_new_tokens,
