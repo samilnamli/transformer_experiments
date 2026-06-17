@@ -36,7 +36,7 @@ uv run python -c "import torch; print(torch.__version__, torch.cuda.is_available
 
 ### CUDA error: "driver is too old (found version 12080)"
 
-**Why:** `uv sync` installs **torch 2.11 from PyPI**, which bundles **CUDA 13** libraries (`nvidia-*-cu13`). RunPod L40S drivers support up to **CUDA 12.8** (driver `12080`), so PyTorch refuses to start CUDA.
+**Why:** `uv sync` installs **torch 2.11 from PyPI** with split **CUDA 13** packages. Even the `cu128` wheel often wants a **newer driver than RunPod's CUDA 12.8** hosts provide.
 
 **Fix (run on the pod):**
 
@@ -44,15 +44,16 @@ uv run python -c "import torch; print(torch.__version__, torch.cuda.is_available
 bash scripts/runpod/fix_cuda_torch.sh
 ```
 
-Or full setup from scratch:
+This removes the PyPI CUDA stack and installs a **self-contained `torch+cu124` wheel** (tries 2.6.0 → 2.5.1 → 2.4.1). That is enough for our experiments; transformers does not require torch 2.11 at runtime.
+
+Re-run `fix_cuda_torch.sh` after any `uv sync`.
+
+If it still fails, check the driver and use the **PyTorch 2.2.0** RunPod template:
 
 ```bash
-bash scripts/runpod/setup_pod.sh
+nvidia-smi
+uv pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 ```
-
-This reinstalls `torch==2.11.0+cu128` from PyTorch's wheel index. Do **not** skip this after `uv sync`. Re-run `fix_cuda_torch.sh` if you run `uv sync` again later.
-
-Optional: set DagsHub MLflow env vars (`DAGSHUB_USER_TOKEN`, `DAGSHUB_TRACKING_URI`) before experiments.
 
 ## Run everything in tmux (detach-safe)
 
