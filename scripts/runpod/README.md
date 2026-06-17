@@ -58,3 +58,12 @@ tmux attach -t voxpopuli
 Optional: `DAGSHUB_USER_TOKEN`, `DAGSHUB_TRACKING_URI` for remote MLflow.
 
 Results: `mlruns/` → `results/test_wer_comparison.json` on parent run.
+
+### HIT-ASR only (1 seed, after main run OOM at batch 384)
+
+```bash
+bash scripts/runpod/run_hierarchical_1seed.sh
+# or: uv run python run.py experiment=voxpopuli_hierarchical_1seed_runpod
+```
+
+Uses `batch_size=192` (fits L40S). Override: `data.batch_size=128` if OOM. ~20–40 min for one seed.

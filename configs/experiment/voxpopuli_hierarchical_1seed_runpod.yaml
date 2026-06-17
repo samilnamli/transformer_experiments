@@ -1,0 +1,38 @@
+# Fast HIT-ASR (hierarchical_transformer) on VoxPopuli — 1 seed, L40S-safe batch.
+# Use after main_results_voxpopuli_runpod baselines are done.
+
+defaults:
+  - /trainer: default
+  - /data: voxpopuli
+  - _self_
+
+_target_: src.experiments.base.BaseExperiment
+parent_run_name: hierarchical_1seed
+seed: 42
+seeds: [42]
+fixed_data_split: false
+
+float32_matmul_precision: medium
+
+trainer:
+  max_epochs: 50
+  precision: bf16-mixed
+
+data:
+  batch_size: 192
+  max_seq_len: 2000
+  eager_load: true
+  num_workers: 0
+
+# No paired tests with a single seed (BaseExperiment skips when n_seeds < 2).
+stats: null
+
+child_runs:
+  - _target_: src.models.transformer.ASRModelSelectorLightning
+    name: hierarchical_transformer
+    primary_weight: 1.0
+    aux_ce_weight: 0.3
+    soft_ce_weight: 0.5
+    soft_ce_temperature: 1.5
+    class_balanced_loss: true
+    early_stopping_patience: 10
