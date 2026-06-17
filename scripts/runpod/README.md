@@ -29,11 +29,28 @@ git checkout runpod/voxpopuli-main-results
 
 make create_environment
 uv sync
-# RunPod PyTorch images usually ship CUDA torch; if not:
-# uv pip install torch --index-url https://download.pytorch.org/whl/cu124
+bash scripts/runpod/fix_cuda_torch.sh   # required on RunPod — see CUDA section below
 
-uv run python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+uv run python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0))"
 ```
+
+### CUDA error: "driver is too old (found version 12080)"
+
+**Why:** `uv sync` installs **torch 2.11 from PyPI**, which bundles **CUDA 13** libraries (`nvidia-*-cu13`). RunPod L40S drivers support up to **CUDA 12.8** (driver `12080`), so PyTorch refuses to start CUDA.
+
+**Fix (run on the pod):**
+
+```bash
+bash scripts/runpod/fix_cuda_torch.sh
+```
+
+Or full setup from scratch:
+
+```bash
+bash scripts/runpod/setup_pod.sh
+```
+
+This reinstalls `torch==2.11.0+cu128` from PyTorch's wheel index. Do **not** skip this after `uv sync`. Re-run `fix_cuda_torch.sh` if you run `uv sync` again later.
 
 Optional: set DagsHub MLflow env vars (`DAGSHUB_USER_TOKEN`, `DAGSHUB_TRACKING_URI`) before experiments.
 

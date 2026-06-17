@@ -9,8 +9,13 @@ mkdir -p logs/runpod
 
 echo "=== [$(date -Is)] VoxPopuli RunPod pipeline ==="
 echo "Repo: $ROOT"
-echo "CUDA: $(uv run python -c 'import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu")')"
+echo "CUDA: $(uv run python -c 'import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu")' 2>/dev/null || echo UNAVAILABLE — run: bash scripts/runpod/fix_cuda_torch.sh)"
 echo "Config: experiment=main_results_voxpopuli_runpod (data.batch_size=384 for 48 GB GPUs)"
+
+if ! uv run python -c "import torch; import sys; sys.exit(0 if torch.cuda.is_available() else 1)" 2>/dev/null; then
+  echo "ERROR: CUDA not available. Run: bash scripts/runpod/fix_cuda_torch.sh"
+  exit 1
+fi
 
 PARQUET="configs/data/processed/facebook_voxpopuli/combined_features_with_transcripts.parquet"
 if [[ ! -f "$PARQUET" ]]; then
