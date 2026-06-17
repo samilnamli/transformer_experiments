@@ -1,78 +1,60 @@
-# RunPod — VoxPopuli paper-ready experiments
+# RunPod — start here
 
-## Recommended GPU
+## Create the pod (do this exactly)
 
-| GPU | Price | VRAM | RAM | Verdict |
-|-----|-------|------|-----|---------|
-| **L40S** | ~$0.86/hr | 48 GB | 125 GB | **Current setup** — `batch_size=384` in runpod config |
-| **RTX 4090** | ~$0.69/hr | 24 GB | 61 GB | Use `data.batch_size=128` override if you switch GPUs |
-| RTX 3090 | ~$0.46/hr | 24 GB | 125 GB | Cheaper; override `data.batch_size=128` |
-| L4 | ~$0.39/hr | 24 GB | 50 GB | Budget; may be tight on RAM for eager-load |
+| Setting | Value |
+|---------|--------|
+| GPU | **L40S** (48 GB) |
+| Template | **Runpod PyTorch 2.2.0** (`py3.10-cuda12.1.1`) |
+| Disk | **≥ 80 GB** (parquet is 24 GB) |
+| Volume | `/workspace` |
 
-**Estimated wall time on L40S (batch 384):** ~1 h Whisper re-decode + ~4–7 h full main results (16 seeds × 10 methods).
+Do **not** use a bare Ubuntu template. Use an official **Runpod PyTorch** image.
 
-If training OOMs, re-run step 3 with `data.batch_size=256` or `128`.
-
-## One-time pod setup
+## Setup (one command — never bare `uv sync`)
 
 ```bash
 git clone https://github.com/samilnamli/transformer_experiments.git
 cd transformer_experiments
 git checkout runpod/voxpopuli-main-results
 
-# Copy the bundled parquet (24 GB) — choose one:
-#   A) From your laptop (if you have it locally):
-#      rsync -avP /path/to/combined_features_with_transcripts.parquet \
-#        root@<pod-ip>:/workspace/s2t-tr-dev/configs/data/processed/facebook_voxpopuli/
-#   B) Google Drive fallback (slower):
-#      uv run python -m src.data.prepare --dataset voxpopuli
+# parquet → configs/data/processed/facebook_voxpopuli/combined_features_with_transcripts.parquet
 
-make create_environment
-uv sync
-bash scripts/runpod/fix_cuda_torch.sh   # required on RunPod — see CUDA section below
-
-uv run python -c "import torch; print(torch.__version__, torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+bash scripts/runpod/setup_pod.sh
 ```
 
-### CUDA error: "driver is too old (found version 12080)"
+`setup_pod.sh` installs deps **without** PyPI torch 2.11, then adds `torch==2.6.0+cu124`.
 
-**Why:** `uv sync` installs **torch 2.11 from PyPI** with split **CUDA 13** packages. Even the `cu128` wheel often wants a **newer driver than RunPod's CUDA 12.8** hosts provide.
-
-**Fix (run on the pod):**
+If you already ran `uv sync` and broke CUDA:
 
 ```bash
 bash scripts/runpod/fix_cuda_torch.sh
 ```
 
-This purges **all** `nvidia-*` / `cuda-toolkit` PyPI packages (they cause `undefined symbol: ncclCommWindowDeregister`), then installs a **self-contained `torch+cu124` wheel with `--no-deps`**.
-
-If you see NCCL / import errors, nuke the venv and redo:
-
-```bash
-rm -rf .venv && make create_environment && uv sync && bash scripts/runpod/fix_cuda_torch.sh
-```
-
-## Run everything in tmux (detach-safe)
+## Run experiments
 
 ```bash
 bash scripts/runpod/tmux_voxpopuli.sh
-# attach later:
 tmux attach -t voxpopuli
 ```
 
-Logs land in `logs/runpod/voxpopuli_<timestamp>.log`.
+## Why previous setup failed
 
-## Manual step-by-step
+1. `uv sync` installed **torch 2.11 from PyPI** with **CUDA 13** (`cuda-toolkit`, `nvidia-*-cu13`).
+2. RunPod driver supports **CUDA 12.8** — incompatible with that stack.
+3. Patching afterward fought leftover NCCL/CUDA packages.
 
-```bash
-# 1) Fix Whisper WER (decoder re-decode from cached features)
-uv run python scripts/redecode_voxpopuli_whisper_overrides_from_features.py
+**Fix:** `pyproject.toml` now pins **linux → torch 2.6.0 from cu124 index**; `setup_pod.sh` skips torch during sync.
 
-# 2) Sanity check
-uv run python scripts/check_voxpopuli.py
+## Recommended GPU
 
-# 3) Paper-ready main results (16 seeds, stats tests)
-uv run python run.py experiment=main_results_voxpopuli_runpod
-```
+| GPU | Verdict |
+|-----|---------|
+| **L40S** | Current — `batch_size=384` in runpod config |
+| RTX 4090 | Override `data.batch_size=128` |
 
-Results are logged to MLflow (`results/test_wer_comparison.json` on the parent run).
+**Estimated wall time (L40S, batch 384):** ~1 h Whisper re-decode + ~4–7 h main results.
+
+Optional: `DAGSHUB_USER_TOKEN`, `DAGSHUB_TRACKING_URI` for remote MLflow.
+
+Results: `mlruns/` → `results/test_wer_comparison.json` on parent run.
