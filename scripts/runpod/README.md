@@ -4,13 +4,14 @@
 
 | GPU | Price | VRAM | RAM | Verdict |
 |-----|-------|------|-----|---------|
-| **RTX 4090** | ~$0.69/hr | 24 GB | 61 GB | **Best pick** — fast decode + training, enough RAM for eager-load |
-| RTX 3090 | ~$0.46/hr | 24 GB | 125 GB | Cheaper; more RAM; slightly slower |
+| **L40S** | ~$0.86/hr | 48 GB | 125 GB | **Current setup** — `batch_size=384` in runpod config |
+| **RTX 4090** | ~$0.69/hr | 24 GB | 61 GB | Use `data.batch_size=128` override if you switch GPUs |
+| RTX 3090 | ~$0.46/hr | 24 GB | 125 GB | Cheaper; override `data.batch_size=128` |
 | L4 | ~$0.39/hr | 24 GB | 50 GB | Budget; may be tight on RAM for eager-load |
 
-Avoid &lt;24 GB VRAM pods. 48 GB (A40/L40) is unnecessary for this workload.
+**Estimated wall time on L40S (batch 384):** ~1 h Whisper re-decode + ~4–7 h full main results (16 seeds × 10 methods).
 
-**Estimated wall time on RTX 4090:** ~1 h Whisper re-decode + ~6–10 h full main results (16 seeds × 10 methods).
+If training OOMs, re-run step 3 with `data.batch_size=256` or `128`.
 
 ## One-time pod setup
 

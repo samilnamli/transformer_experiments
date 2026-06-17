@@ -10,6 +10,7 @@ mkdir -p logs/runpod
 echo "=== [$(date -Is)] VoxPopuli RunPod pipeline ==="
 echo "Repo: $ROOT"
 echo "CUDA: $(uv run python -c 'import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu")')"
+echo "Config: experiment=main_results_voxpopuli_runpod (data.batch_size=384 for 48 GB GPUs)"
 
 PARQUET="configs/data/processed/facebook_voxpopuli/combined_features_with_transcripts.parquet"
 if [[ ! -f "$PARQUET" ]]; then

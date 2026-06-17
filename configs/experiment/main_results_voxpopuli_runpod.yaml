@@ -1,5 +1,6 @@
-# VoxPopuli paper-ready main results — tuned for RunPod 24 GB GPUs.
+# VoxPopuli paper-ready main results — tuned for RunPod L40S / 48 GB VRAM.
 # Same statistical protocol as main_results_ami (16 seeds + paired tests).
+# batch_size 384 uses ~half the headroom of AMI@96GB (256); drop to 256 on OOM.
 
 defaults:
   - /trainer: default
@@ -19,7 +20,7 @@ trainer:
   precision: bf16-mixed
 
 data:
-  batch_size: 128
+  batch_size: 384
   max_seq_len: 2000
   eager_load: true
   num_workers: 0
