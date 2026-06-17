@@ -38,6 +38,7 @@ class ASRDataModule(pl.LightningDataModule):
         max_seq_len: int = 2000,
         eager_load: bool = False,
         seed: int = 42,
+        whisper_decode_overrides_path: str | None = None,
         **_kwargs,
     ):
         super().__init__()
@@ -53,6 +54,7 @@ class ASRDataModule(pl.LightningDataModule):
         self.max_seq_len = max_seq_len
         self.eager_load = eager_load
         self.seed = seed
+        self.whisper_decode_overrides_path = whisper_decode_overrides_path
 
         self._dataset: Optional[ASRFeatureDataset] = None
         self._train: Optional[Subset] = None
@@ -74,6 +76,7 @@ class ASRDataModule(pl.LightningDataModule):
             parquet_path=self.parquet_path,
             max_seq_len=self.max_seq_len,
             eager_load=self.eager_load,
+            whisper_decode_overrides_path=self.whisper_decode_overrides_path,
         )
         self.reseed_split(self.seed)
 

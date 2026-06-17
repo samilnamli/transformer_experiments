@@ -1,0 +1,5 @@
+# Whisper-base encoder-decoder (manuscript base expert).
+name: whisper
+hf_model_id: openai/whisper-base
+hf_revision: null
+target_sample_rate: 16000

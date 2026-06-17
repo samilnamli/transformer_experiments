@@ -73,15 +73,27 @@ class Seq2SeqExtractor(BaseFeatureExtractor):
             return [hidden_np[i, : int(v)] for i, v in enumerate(valid_lens)]
         return [hidden_np[i] for i in range(hidden_np.shape[0])]
 
+    def _is_whisper(self) -> bool:
+        return "whisper" in self.spec.hf_model_id.lower()
+
+    def _whisper_generate_kwargs(self, inputs: dict) -> dict:
+        gen_kwargs: dict = {"max_new_tokens": self.max_new_tokens}
+        if "attention_mask" in inputs:
+            gen_kwargs["attention_mask"] = inputs["attention_mask"]
+        if self._is_whisper():
+            # Force English transcription — without this, multilingual Whisper
+            # can wander into wrong-language outputs on accented speech.
+            forced = self.processor.get_decoder_prompt_ids(language="en", task="transcribe")
+            if forced is not None:
+                gen_kwargs["forced_decoder_ids"] = forced
+            gen_kwargs["no_repeat_ngram_size"] = 3
+        return gen_kwargs
+
     def _transcribe_batch(self, batch: List[np.ndarray]) -> List[str]:
         if not batch:
             return []
         inputs = self._processor_inputs(batch)
         input_features = inputs["input_features"].to(self.dtype)
 
-        gen_kwargs: dict = {"max_new_tokens": self.max_new_tokens}
-        if "attention_mask" in inputs:
-            gen_kwargs["attention_mask"] = inputs["attention_mask"]
-
-        token_ids = self.model.generate(input_features, **gen_kwargs)
+        token_ids = self.model.generate(input_features, **self._whisper_generate_kwargs(inputs))
         return self.processor.batch_decode(token_ids, skip_special_tokens=True)

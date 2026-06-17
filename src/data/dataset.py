@@ -66,6 +66,7 @@ Memory model:
 from functools import lru_cache, partial
 import json
 import logging
+from pathlib import Path
 from typing import Dict, List, Optional
 
 import numpy as np
@@ -193,6 +194,7 @@ class ASRFeatureDataset(Dataset):
         target_row_group_size: int = DEFAULT_TARGET_ROW_GROUP_SIZE,
         cache_dir: Optional[str] = None,
         eager_load: bool = False,
+        whisper_decode_overrides_path: str | None = None,
     ):
         """Args:
         parquet_path: Path to the unified combined parquet.
@@ -277,6 +279,47 @@ class ASRFeatureDataset(Dataset):
                 for name in self.model_names
                 if self._transcription_cols[name] in schema_names
             }
+
+        if whisper_decode_overrides_path is not None:
+            override_path = Path(whisper_decode_overrides_path)
+            if not override_path.exists():
+                raise FileNotFoundError(
+                    f"Whisper decode override not found: {override_path}. "
+                    "Pass a valid --whisper-decode-overrides path."
+                )
+
+            data = np.load(str(override_path), allow_pickle=True)
+            if "whisper_wer" not in data or "whisper_transcription" not in data:
+                raise ValueError(
+                    "Whisper override file must contain keys "
+                    "'whisper_wer' and 'whisper_transcription'."
+                )
+
+            if "whisper" not in self.model_names:
+                logger.warning(
+                    "Whisper override requested but parquet has no whisper expert. "
+                    "Skipping overrides."
+                )
+            else:
+                whisper_idx = self.model_names.index("whisper")
+                wer_override = np.asarray(data["whisper_wer"], dtype=np.float32)
+                if wer_override.shape[0] != self.num_rows:
+                    raise ValueError(
+                        f"Whisper override wer length {wer_override.shape[0]} "
+                        f"does not match dataset num_rows {self.num_rows}."
+                    )
+                self.wer_matrix[:, whisper_idx] = wer_override
+
+                if self._has_text and self.transcriptions is not None:
+                    whisper_trans = data["whisper_transcription"]
+                    whisper_trans_list = [str(x) for x in whisper_trans.tolist()]
+                    if len(whisper_trans_list) != self.num_rows:
+                        raise ValueError(
+                            f"Whisper override transcription length {len(whisper_trans_list)} "
+                            f"does not match dataset num_rows {self.num_rows}."
+                        )
+                    if "whisper" in self.transcriptions:
+                        self.transcriptions["whisper"] = whisper_trans_list
 
         if self.eager_load:
             logger.info("Eager loading full parquet into flat float16 numpy buffers...")

@@ -2,6 +2,14 @@
 /data/
 ! /data/*/.gitkeep
 
+# Bundled processed parquets (multi-GB; copy manually or use prepare_data)
+/configs/data/processed/
+
+# Local debug scratch from parquet inspection
+.parquet_inspect_*.txt
+.schema_*.txt
+.vp_*.txt
+
 # MLflow & Hydra outputs (all artefacts go to DagsHub MLflow)
 /mlruns/
 /outputs/

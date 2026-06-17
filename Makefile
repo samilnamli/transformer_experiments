@@ -79,6 +79,16 @@ prepare_data:
 	fi
 	$(PYTHON_INTERPRETER) -m src.data.prepare --dataset $(DATASET)
 
+## Download AMI processed parquet from Google Drive
+.PHONY: download_ami
+download_ami:
+	$(PYTHON_INTERPRETER) -m src.data.prepare --dataset ami
+
+## Ensure VoxPopuli parquet is available (bundled copy or Google Drive fallback)
+.PHONY: download_voxpopuli
+download_voxpopuli:
+	$(PYTHON_INTERPRETER) -m src.data.prepare --dataset voxpopuli
+
 
 # ----------------------------------------------------------------------------
 # Reproduce a logged MLflow run (checkout commit + apply patch + re-run)

@@ -42,7 +42,7 @@ make requirements                    # uv sync
 
 # 2. Data
 make download_ami                    # processed AMI parquet from Drive
-make download_voxpopuli              # (parked dataset, fetches anyway)
+make download_voxpopuli              # bundled parquet under configs/data/processed, else Drive
 
 # 3. One-line experiment run (Hydra-overridable) *subject to small changes*
 uv run python -m src.experiments.run experiments=ablation_loss
