@@ -1,0 +1,106 @@
+# VoxPopuli main results — Colab edition.
+#
+# Same protocol as ``main_results_voxpopuli`` but tuned for a single Colab GPU
+# and configured for a many-seed, statistically-reportable comparison table.
+#
+# Key differences from the RunPod configs:
+#   * MLP-pool rival trains with the SAME composite loss as HIT-ASR
+#     (weighted-WER + hard CE + soft CE), NOT hard-CE-only. Reviewers
+#     rejected the hard-CE-only baseline as an unfair rival.
+#   * A big list of (fun) random seeds. Each seed re-derives BOTH the
+#     train/val/test split AND the model init (fixed_data_split=false),
+#     i.e. repeated-random-split ("Monte-Carlo") cross-validation — the
+#     precondition for the Nadeau-Bengio corrected paired t-test.
+#   * Colab-friendly batch size / lazy loading (see notes below).
+#
+# Runtime warning: 2 trainable models x N seeds x up to 50 epochs. With the
+# full seed list below this is many GPU-hours. Trim ``seeds`` (or lower
+# ``trainer.max_epochs``) for a quick pass; the notebook exposes an easy knob.
+
+defaults:
+  - /trainer: default
+  - /data: voxpopuli
+  - _self_
+
+_target_: src.experiments.base.BaseExperiment
+parent_run_name: colab_main
+seed: 42 # data-split anchor (only used when fixed_data_split=true)
+
+# Fun nerd numbers, every one of them. Each seed = an independent 80/10/10
+# random resample + independent model init.
+#   42  Hitchhiker's Guide          1337    leet
+#   1729 Ramanujan taxicab          73      Sheldon's favourite prime
+#   8675309 Jenny (867-5309)        31415   pi
+#   27182 e                         16180   golden ratio (phi)
+#   112358 Fibonacci                6022    Avogadro
+#   6626 Planck                     65536   2^16
+#   2048 2^11 / the game            9001    "it's over 9000!"
+#   8086 Intel CPU                  12321   palindrome
+#   86400 seconds in a day          299792  speed of light (km/s)
+#   90210 Beverly Hills             404     not found
+seeds: [42, 1337, 1729, 73, 8675309, 31415, 27182, 16180, 112358, 6022, 6626, 65536, 2048, 9001, 8086, 12321, 86400, 299792, 90210, 404]
+fixed_data_split: false
+
+# medium = tf32/bf16 fast path; fine for a router this small.
+float32_matmul_precision: medium
+
+trainer:
+  max_epochs: 50
+  precision: bf16-mixed
+
+data:
+  # 128 fits an L4 (24 GB) / T4-high-RAM. Bump to 192 on A100-40GB.
+  batch_size: 128
+  max_seq_len: 2000
+  # Lazy load: safe on standard Colab RAM (the parquet is ~24 GB). If you have
+  # a high-RAM A100 runtime, set eager_load=true for a big speedup across seeds.
+  eager_load: false
+  num_workers: 4
+
+stats:
+  metric: wer_mean
+  tests:
+    - _target_: src.stats.paired_t.NadeauBengioCorrectedTTest
+      alpha: 0.05
+
+child_runs:
+  # ---- training-free baselines (cheap; re-evaluated per seed) ----
+  - _target_: src.models.baselines.SingleModelBaseline
+    name: single_hubert
+    model_idx: 0
+  - _target_: src.models.baselines.SingleModelBaseline
+    name: single_whisper
+    model_idx: 1
+  - _target_: src.models.baselines.SingleModelBaseline
+    name: single_wav2vec2
+    model_idx: 2
+  - _target_: src.models.baselines.RandomBaseline
+    name: random
+  - _target_: src.models.baselines.WeightedRandomBaseline
+    name: weighted_random
+  - _target_: src.models.baselines.OracleBaseline
+    name: oracle
+  - _target_: src.models.baselines.ROVERBaseline
+    name: rover
+  - _target_: src.models.baselines.WeightedROVERBaseline
+    name: weighted_rover
+
+  # ---- trainable rival: MLP pool, SAME composite loss as HIT-ASR ----
+  - _target_: src.models.mlp.MLPPoolSelectorLightning
+    name: mlp_pool
+    primary_weight: 1.0
+    aux_ce_weight: 0.3
+    soft_ce_weight: 0.5
+    soft_ce_temperature: 1.5
+    class_balanced_loss: true
+    early_stopping_patience: 10
+
+  # ---- our method: hierarchical transformer router ----
+  - _target_: src.models.transformer.ASRModelSelectorLightning
+    name: hierarchical_transformer
+    primary_weight: 1.0
+    aux_ce_weight: 0.3
+    soft_ce_weight: 0.5
+    soft_ce_temperature: 1.5
+    class_balanced_loss: true
+    early_stopping_patience: 10

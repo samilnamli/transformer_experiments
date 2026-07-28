@@ -22,7 +22,11 @@
       "Bash(rm -rf /tmp/smoke_mlruns /Users/huseyinkaraca/Desktop/s2t-tr-dev/data/processed/synthetic_regime_switch /Users/huseyinkaraca/Desktop/s2t-tr-dev/.parquet_cache)",
       "Bash(git -C /Users/huseyinkaraca/Desktop/s2t-tr-dev status --short)",
       "Bash(git rm *)",
-      "mcp__mlflow-mcp__describe_run"
+      "mcp__mlflow-mcp__describe_run",
+      "Bash(git log *)",
+      "Bash(python3 /private/tmp/claude-501/-Users-huseyinkaraca-Desktop-transformer-experiments/607149d8-a0b4-4cbd-9675-5cd0dcd8ea9e/scratchpad/make_nb.py)",
+      "Bash(python3 -c \"import json,sys; json.load\\(open\\('notebooks/colab/main_results_voxpopuli.ipynb'\\)\\); print\\('valid ipynb JSON'\\)\")",
+      "Bash(cd *)"
     ]
   }
 }
